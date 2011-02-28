@@ -1,0 +1,24 @@
+every minute the simulation runs:
+
+
+evey other minute a new passenger arrives.  
+    the new passenger has only one property: meal(10), drink(8) or budget(6).
+    a passenger has a 0.2 chance of buying a meal ticket, 0.3 chance of a drink and 0.5 of a budget.
+    a meal passenger takes 10 minutes to check in, drink 8, budget 6.
+    if there is a check in desk in the collection that has space free in it's queue, the passenger joins that desk
+    otherwise, a new desk is created and the passenger joins that queue. 
+every minute the queues are processed.  
+    the person at the front of the queue has one minute taken off their time.  
+    if their time is zero, they are removed from the queue
+
+
+2:3:5
+
+there is a 0.2 chance of a random number between 0 and 100 being 20 or less.  
+there is a 0.3 chance of a random number 
+
+
+given a random number between 0 and 100....
+  there is a 0.2 chance it is 20 or less
+  there is a 0.3 chance it is 20 to 50
+  there is a 0.5 chance it is larger than 50
