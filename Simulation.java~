@@ -78,7 +78,8 @@ public class Simulation  {
      * Sorts the passengers into check in desks.  The passengers
      * just enter the first queue that contains less than 4 people.
      * If there are no desks available with queue sizes of 3 or less, 
-     * a new check in desk is opened. 
+     * a new check in desk is opened.  Here the ArrayDeque is operating
+     * in 'queue mode', adding to the bottom of the stack.
      * 
      * @ return true if the passenger successfully joins the queue,
      *          false otherwise
@@ -106,7 +107,8 @@ public class Simulation  {
      * in line.  The amount of time left to check in for each
      * passenger at the 'front' (tail) of the queue is decremented
      * once per minute.  If subsequently the time remaining is zero,
-     * that passenger leaves the queue (pop).
+     * that passenger leaves the queue (pop).  Here the ArrayDeque
+     * functions as a stack, and uses methods inhereted from Stack.
      */
     private void processQueues()  {
         for (ArrayDeque<Integer> desk : desks)  {

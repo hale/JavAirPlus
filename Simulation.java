@@ -12,7 +12,7 @@ import java.util.ArrayDeque;
 public class Simulation  {
     private ArrayList<ArrayDeque<Integer>> desks;
     private Random rand;
-    public static final int MAX_QUEUE_SIZE = 10;
+    public static final int MAX_QUEUE_SIZE = 4;
     /**
      * Sole constructor of the Simulation class. 
      * 
