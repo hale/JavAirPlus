@@ -1,12 +1,17 @@
 #BlueJ class context
 comment0.params=minutes
 comment0.target=Simulation(int)
+comment0.text=\n\ Sole\ constructor\ of\ the\ Simulation\ class.\ \n\ \n\ @param\ minutes\ The\ amount\ of\ time\ in\ minutes\ to\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ run\ the\ simulation.\n
 comment1.params=minutes
 comment1.target=void\ startSim(int)
+comment1.text=\n\ Manages\ the\ simulation.\ Every\ other\ minute\ a\ \n\ new\ passenger\ arrives.\ Every\ minute\ the\ queues\n\ are\ processed,\ which\ simulates\ time\ passing\ as\n\ passengers\ slowly\ check\ in.\ The\ result\ of\ the\n\ simulation\ is\ printed\ as\ the\ total\ amount\ of\n\ time\ elapsed,\ and\ the\ total\ number\ of\ check\ \n\ in\ desks\ required.\ \n\ \n\ @param\ minutes\ The\ amount\ of\ time\ in\ minutes\ to\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ run\ the\ simulation.\n
 comment2.params=
 comment2.target=void\ newPassenger()
+comment2.text=\n\ Simulates\ the\ arrival\ of\ a\ new\ passenger\ at\ JavAir\n\ airways.\ \ It\ has\ been\ found\ that\ 20%\ of\ passengers\ \n\ buy\ a\ meal\ ticket,\ 30%\ a\ drink\ ticket\ and\ 50%\ a\ \n\ budget\ ticket.\ A\ random\ number\ generated\ is\ used\n\ for\ this\ probability\ function.\ \ The\ type\ of\ ticket\n\ that\ a\ passenger\ buys\ determines\ the\ amount\ of\ time\n\ taken\ to\ check\ in.\ For\ meal\ tickets\ this\ is\ 10\ minutes,\ \n\ for\ drink\ tickets\ 8\ minutes\ and\ for\ budget\ tickets\ 6\n\ minutes.\n
 comment3.params=time
 comment3.target=boolean\ addPassenger(int)
+comment3.text=\n\ Sorts\ the\ passengers\ into\ check\ in\ desks.\ \ The\ passengers\n\ just\ enter\ the\ first\ queue\ that\ contains\ less\ than\ 4\ people.\n\ If\ there\ are\ no\ desks\ available\ with\ queue\ sizes\ of\ 3\ or\ less,\ \n\ a\ new\ check\ in\ desk\ is\ opened.\ \ Here\ the\ ArrayDeque\ is\ operating\n\ in\ 'queue\ mode',\ adding\ to\ the\ bottom\ of\ the\ stack.\n\ \n\ @\ return\ true\ if\ the\ passenger\ successfully\ joins\ the\ queue,\n\ \ \ \ \ \ \ \ \ \ false\ otherwise\n
 comment4.params=
 comment4.target=void\ processQueues()
+comment4.text=\n\ Simulates\ the\ ongoing\ checking\ in\ process\ as\ everyone\ waits\ \n\ in\ line.\ \ The\ amount\ of\ time\ left\ to\ check\ in\ for\ each\n\ passenger\ at\ the\ 'front'\ (tail)\ of\ the\ queue\ is\ decremented\n\ once\ per\ minute.\ \ If\ subsequently\ the\ time\ remaining\ is\ zero,\n\ that\ passenger\ leaves\ the\ queue\ (pop).\ \ Here\ the\ ArrayDeque\n\ functions\ as\ a\ stack,\ and\ uses\ methods\ inhereted\ from\ Stack.\n
 numComments=5
