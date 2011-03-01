@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Simulation()
+comment0.params=minutes
+comment0.target=Simulation(int)
 comment1.params=minutes
 comment1.target=void\ startSim(int)
 comment2.params=
 comment2.target=void\ newPassenger()
 comment3.params=time
-comment3.target=void\ addPassenger(int)
+comment3.target=boolean\ addPassenger(int)
 comment4.params=
 comment4.target=void\ processQueues()
 numComments=5

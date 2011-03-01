@@ -9,10 +9,9 @@ public class Simulation  {
     private ArrayList<ArrayDeque<Integer>> desks;
     private Random rand;
     public static final int MAX_QUEUE_SIZE = 4;
-    public Simulation(int minutes)  {
+    public Simulation()  {
         desks = new ArrayList();
         rand = new Random();
-        startSim(minutes);
     }
     
     public void startSim(int minutes)  {
@@ -74,6 +73,12 @@ public class Simulation  {
             }
         }
         
+    }
+    
+    public void printDesks()  {
+        for (ArrayDeque<Integer> people : desks)  {
+            System.out.println(people);
+        }
     }
 
 
