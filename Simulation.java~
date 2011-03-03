@@ -87,8 +87,8 @@ public class Simulation  {
     private boolean addPassenger(int time)  {
         int failCount = 0;  // keeps track of the number of full queues
         for (ArrayDeque<Integer> desk : desks)  {
-            if (desk.size() < MAX_QUEUE_SIZE)  {
-                return desk.offer((Integer) time);
+            if (desk.size() < MAX_QUEUE_SIZE)  { // if there is space at the desk
+                return desk.offer((Integer) time); // add the person to the queue at that desk
             }
             else  {
                 failCount++;
@@ -96,7 +96,7 @@ public class Simulation  {
         }
         
         if (failCount == desks.size())  { // if all the desks are full
-            desks.add(new ArrayDeque<Integer>());
+            desks.add(new ArrayDeque<Integer>()); // open a new desk
             addPassenger(time);
         }
         return false;
