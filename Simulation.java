@@ -24,7 +24,7 @@ public class Simulation  {
      *                run the simulation.
      */
     public Simulation(int minutes)  {
-        desks = new ArrayList();
+        desks = new ArrayList<ArrayDeque<Integer>>();
         rand = new Random();
         startSim(minutes);
     }
@@ -52,7 +52,7 @@ public class Simulation  {
         System.out.println("The simulation has completed.");
         System.out.println("    Time elapsed in minutes: " + minutes);
         System.out.println("    Minimum number of check in desks required: " + desks.size());
-        System.out.println("passengers: " + passengerCount);
+        System.out.println("    Passengers: " + passengerCount);
     }
     
     /**
