@@ -13,6 +13,7 @@ public class Simulation  {
     private ArrayList<ArrayDeque<Integer>> desks;
     private Random rand;
     public static final int MAX_QUEUE_SIZE = 4;
+    private int passengerCount;
     /**
      * Sole constructor of the Simulation class. 
      * 
@@ -41,12 +42,14 @@ public class Simulation  {
         for (int i = 1; i<minutes+1; i++)  {
             if (i%2 == 0)  {
                 newPassenger();
+                passengerCount++;
             }
             processQueues();
         }
         System.out.println("The simulation has completed.");
         System.out.println("    Time elapsed in minutes: " + minutes);
         System.out.println("    Minimum number of check in desks required: " + desks.size());
+        System.out.println("passengers: " + passengerCount);
     }
     
     /**

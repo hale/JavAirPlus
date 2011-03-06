@@ -8,6 +8,9 @@ import java.util.ArrayDeque;
  * to check in on the flight. An ArrayDeque manages the
  * queue at each desk. An ArrayList manages the list of
  * desks.  
+ * 
+ * @author Philip Hale
+ * @version final
  */
 public class Simulation  {
     private ArrayList<ArrayDeque<Integer>> desks;
@@ -84,8 +87,10 @@ public class Simulation  {
      * a new check in desk is opened.  Here the ArrayDeque is operating
      * in 'queue mode', adding to the bottom of the stack.
      * 
-     * @ return true if the passenger successfully joins the queue,
-     *          false otherwise
+     * @param time The time taken for the passenger to be processed at
+     *             the check-in desk.
+     * @return true if the passenger successfully joins the queue,
+     *              false otherwise
      */
     private boolean addPassenger(int time)  {
         int failCount = 0;  // keeps track of the number of full queues
