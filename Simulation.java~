@@ -24,7 +24,7 @@ public class Simulation  {
      *                run the simulation.
      */
     public Simulation(int minutes)  {
-        desks = new ArrayList()<ArrayDeque<Integer>>;
+        desks = new ArrayList<ArrayDeque<Integer>>();
         rand = new Random();
         startSim(minutes);
     }
@@ -43,7 +43,8 @@ public class Simulation  {
      */
     public void startSim(int minutes)  {
         for (int i = 1; i<minutes+1; i++)  {
-            if (i%2 == 0)  {
+            pHalf = rand.nextInt(2); // generate either a 0 or a 1.
+            if (pHalf == 1)  {
                 newPassenger();
                 passengerCount++;
             }

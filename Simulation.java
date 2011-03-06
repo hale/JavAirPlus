@@ -43,7 +43,8 @@ public class Simulation  {
      */
     public void startSim(int minutes)  {
         for (int i = 1; i<minutes+1; i++)  {
-            if (i%2 == 0)  {
+            int pHalf = rand.nextInt(2); // generate either a 0 or a 1.
+            if (pHalf == 1)  {
                 newPassenger();
                 passengerCount++;
             }
